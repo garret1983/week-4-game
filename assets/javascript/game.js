@@ -1,4 +1,5 @@
-$(document).onkeyup(function () {
+$(document).ready(function () {
+console.log("works")
     var Random = Math.floor(Math.random() * 101 + 19)
 
     $("#randomNumber").text(Random);
@@ -10,7 +11,7 @@ $(document).onkeyup(function () {
 
     var userTotal = 0;
     var wins = 0;
-    var losses = 0; 
+    var losses = 0;
 
     $("#numberWins").text(wins);
     $("#numberLosses").text(losses);
