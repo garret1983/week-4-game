@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).onkeyup(function () {
     var Random = Math.floor(Math.random() * 101 + 19)
 
     $("#randomNumber").text(Random);
@@ -27,14 +27,14 @@ $(document).ready(function () {
         $("#finalTotal").text(userTotal);
     }
 
-    function yay() {
+    function wins() {
         alert("You won!");
         wins++;
         $("#numberWins").text(wins);
         reset();
     }
 
-    function loser() {
+    function loses() {
         alert("You lose!");
         losses++;
         $("#numberLosses").text(losses);
@@ -46,11 +46,11 @@ $(document).ready(function () {
         console.log("New userTotal= " + userTotal);
         $("#finalTotal").text(userTotal);
 
-        if (userTotal == Random) {
-            yay();
+        if (userTotal === Random) {
+            wins();
         }
         else if (userTotal > Random) {
-            loser();
+            loses();
         }
     })
     $("#two").on("click", function () {
@@ -58,10 +58,10 @@ $(document).ready(function () {
         console.log("New userTotal= " + userTotal);
         $('#finalTotal').text(userTotal);
         if (userTotal == Random) {
-            yay();
+            wins();
         }
         else if (userTotal > Random) {
-            loser();
+            loses();
         }
     })
     $("#three").on("click", function () {
@@ -70,10 +70,10 @@ $(document).ready(function () {
         $("#finalTotal").text(userTotal);
 
         if (userTotal == Random) {
-            yay();
+            wins();
         }
         else if (userTotal > Random) {
-            loser();
+            loses();
         }
     })
     $("#four").on("click", function () {
@@ -82,10 +82,10 @@ $(document).ready(function () {
         $("#finalTotal").text(userTotal);
 
         if (userTotal == Random) {
-            yay();
+            wins();
         }
         else if (userTotal > Random) {
-            loser();
+            loses();
         }
     });
 }); 
