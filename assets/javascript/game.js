@@ -28,7 +28,7 @@ console.log("works")
         $("#finalTotal").text(userTotal);
     }
 
-    function wins() {
+    function userWins() {
         alert("You won!");
         wins++;
         $("#numberWins").text(wins);
@@ -59,7 +59,7 @@ console.log("works")
         console.log("New userTotal= " + userTotal);
         $('#finalTotal').text(userTotal);
         if (userTotal == Random) {
-            wins();
+            userWins();
         }
         else if (userTotal > Random) {
             loses();
@@ -71,7 +71,7 @@ console.log("works")
         $("#finalTotal").text(userTotal);
 
         if (userTotal == Random) {
-            wins();
+            userWins();
         }
         else if (userTotal > Random) {
             loses();
@@ -83,7 +83,7 @@ console.log("works")
         $("#finalTotal").text(userTotal);
 
         if (userTotal == Random) {
-            wins();
+            userWins();
         }
         else if (userTotal > Random) {
             loses();
